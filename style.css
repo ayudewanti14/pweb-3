@@ -1,0 +1,352 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url("bg.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: black;
+    margin: 0;
+    position: relatives;
+}
+
+h1 img {
+    width: 2rem;
+    height: 2rem;
+    margin-left: 10px;
+}
+
+.container {
+    width: 500px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto 0 auto; 
+    max-width: 500px;
+    position: absolute; 
+    top: 150px; 
+    left: 50%;
+    transform: translateX(-50%); 
+}
+
+
+
+.stats-container {
+    padding: 30px;
+    border-radius: 20px; 
+    border: 2px solid lightgrey;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    width: 100%;
+    box-shadow: 0 5px 15px rgba(30, 144, 255, 0.7);
+}
+
+.details {
+    width: 100%;
+}
+
+.details h1 {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+}
+
+#progressBar {
+    width: 100%;
+    height: 10px;
+    background-color: lightgrey;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+#progress {
+    width: 80%;
+    height: 10px;
+    background-color: cornflowerblue;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+#numbers {
+    width: 100px;
+    height: 100px;
+    background-color: cadetblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+form {
+    margin-top: 60px;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    flex: 1;
+    padding: 16px;
+    background: aliceblue;
+    border: 1px solid cadetblue;
+    border-radius: 10px; 
+    outline: none;
+    color: black;
+}
+
+button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: cadetblue;
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: green;
+}
+
+
+button img {
+    width: 60%; 
+    height: auto;
+}
+
+#task-list{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 30px;
+    width: 100%;
+    list-style: none;
+}
+
+.taskItem{
+    width: 100%;
+    display: flex;
+    background-color:aliceblue;
+    padding: 10px;
+    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid cadetblue;
+    box-shadow: 0 5px 15px rgba(30, 144, 255, 0.7);
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.task input{
+    width: 20px;
+    height: 20px;
+}
+
+.completed p {
+    text-decoration: line-through;
+    color: cornflowerblue;
+}
+
+.taskItem img {
+    width: 24px;
+    height: 24px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.taskItem img:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+.task-container {
+    width: 100%;
+    max-width: 500px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid cadetblue;
+    box-shadow: 0 5px 15px rgba(30, 144, 255, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    position: relative; 
+}
+
+.task-list {
+    width: 100%;
+    max-height: 200px; 
+    overflow-y: auto; 
+    padding-right: 5px; 
+}
+
+.task-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.task-list::-webkit-scrollbar-thumb {
+    background-color: cadetblue;
+    border-radius: 4px;
+}
+
+.task-list::-webkit-scrollbar-track {
+    background: aliceblue;
+}
+
+
+.task-container form {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.task-container ul {
+    width: 100%;
+}
+
+
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #333;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: none;
+    opacity: 0.9;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    width: 30%;
+    margin: auto;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#editTaskInput {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid cadetblue;
+    border-radius: 5px;
+}
+
+.save {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: cadetblue;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    margin: 10px auto;
+    transition: background-color 0.3s ease;
+}
+
+.save:hover {
+    background-color: gray;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+        position: static;
+        transform: none;
+    }
+
+    .stats-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        text-align: center;
+    }
+
+    #numbers {
+        width: 80px;
+        height: 80px;
+        font-size: 24px;
+    }
+
+    .task-container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    input {
+        padding: 12px;
+    }
+
+    button {
+        width: 45px;
+        height: 45px;
+    }
+
+    .taskItem {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .icons {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+    }
+}
